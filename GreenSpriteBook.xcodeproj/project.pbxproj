@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		882AF29E208DF91500716F33 /* MathGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882AF29D208DF91500716F33 /* MathGeometry.swift */; };
+		882AF2A0208E201B00716F33 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882AF29F208E201B00716F33 /* Hero.swift */; };
+		882AF2A2208E205C00716F33 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882AF2A1208E205C00716F33 /* Monster.swift */; };
 		8839DFEC207D1E1300317381 /* TeslaMagicTower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8839DFEB207D1E1300317381 /* TeslaMagicTower.swift */; };
 		8839DFFB207D45F500317381 /* Tesla.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8839DFFA207D45F500317381 /* Tesla.fsh */; };
 		8839DFFD207E8A8700317381 /* Spirit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8839DFFC207E8A8700317381 /* Spirit.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		882AF29D208DF91500716F33 /* MathGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathGeometry.swift; sourceTree = "<group>"; };
+		882AF29F208E201B00716F33 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		882AF2A1208E205C00716F33 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		8839DFEB207D1E1300317381 /* TeslaMagicTower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeslaMagicTower.swift; sourceTree = "<group>"; };
 		8839DFFA207D45F500317381 /* Tesla.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Tesla.fsh; sourceTree = "<group>"; };
 		8839DFFC207E8A8700317381 /* Spirit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spirit.swift; sourceTree = "<group>"; };
@@ -32,7 +38,6 @@
 		88422D73207CB565004AE981 /* GoldStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldStorage.swift; sourceTree = "<group>"; };
 		88562FE620774AA800FE3648 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		88562FF9207A81EA00FE3648 /* SpriteCycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteCycle.swift; sourceTree = "<group>"; };
-		887DB475207CC28E004DF043 /* GreenSpriteBookResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreenSpriteBookResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E60FE820762AA900118B84 /* GreenSpriteBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GreenSpriteBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E60FEB20762AA900118B84 /* GreenSpriteBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GreenSpriteBook.h; sourceTree = "<group>"; };
 		88E60FEC20762AA900118B84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,13 +51,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		887DB472207CC28E004DF043 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		88E60FE420762AA900118B84 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				88E60FE820762AA900118B84 /* GreenSpriteBook.framework */,
-				887DB475207CC28E004DF043 /* GreenSpriteBookResources.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,12 +98,15 @@
 				88422D6A207CA97E004AE981 /* Building.swift */,
 				88E610002076824900118B84 /* Creature.swift */,
 				8839DFFC207E8A8700317381 /* Spirit.swift */,
+				882AF29F208E201B00716F33 /* Hero.swift */,
+				882AF2A1208E205C00716F33 /* Monster.swift */,
 				88562FF9207A81EA00FE3648 /* SpriteCycle.swift */,
 				88E60FFE20767D8500118B84 /* SpriteStat.swift */,
 				88E60FFA207631DE00118B84 /* CCSpriteAnimable.swift */,
 				88E60FFC2076373200118B84 /* Map2D.swift */,
 				88E60FF820762F3F00118B84 /* typeUtility.swift */,
 				88562FE620774AA800FE3648 /* ArrayExtension.swift */,
+				882AF29D208DF91500716F33 /* MathGeometry.swift */,
 				88422D75207CB608004AE981 /* Objects */,
 			);
 			path = GreenSpriteBook;
@@ -134,23 +134,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		887DB474207CC28E004DF043 /* GreenSpriteBookResources */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 887DB478207CC28E004DF043 /* Build configuration list for PBXNativeTarget "GreenSpriteBookResources" */;
-			buildPhases = (
-				887DB471207CC28E004DF043 /* Sources */,
-				887DB472207CC28E004DF043 /* Frameworks */,
-				887DB473207CC28E004DF043 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GreenSpriteBookResources;
-			productName = GreenSpriteBookResources;
-			productReference = 887DB475207CC28E004DF043 /* GreenSpriteBookResources.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 		88E60FE720762AA900118B84 /* GreenSpriteBook */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88E60FF020762AA900118B84 /* Build configuration list for PBXNativeTarget "GreenSpriteBook" */;
@@ -175,19 +158,13 @@
 		88E60FDF20762AA900118B84 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Antoine FeuFeu";
 				TargetAttributes = {
-					887DB474207CC28E004DF043 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 76BYA9T7S3;
-						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
-					};
 					88E60FE720762AA900118B84 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 76BYA9T7S3;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -205,19 +182,11 @@
 			projectRoot = "";
 			targets = (
 				88E60FE720762AA900118B84 /* GreenSpriteBook */,
-				887DB474207CC28E004DF043 /* GreenSpriteBookResources */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		887DB473207CC28E004DF043 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		88E60FE620762AA900118B84 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,18 +198,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		887DB471207CC28E004DF043 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		88E60FE320762AA900118B84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				88E60FFF20767D8500118B84 /* SpriteStat.swift in Sources */,
+				882AF29E208DF91500716F33 /* MathGeometry.swift in Sources */,
 				88422D74207CB565004AE981 /* GoldStorage.swift in Sources */,
 				88E60FF920762F3F00118B84 /* typeUtility.swift in Sources */,
 				88E610012076824900118B84 /* Creature.swift in Sources */,
@@ -249,7 +212,9 @@
 				88562FE720774AA800FE3648 /* ArrayExtension.swift in Sources */,
 				88422D78207CBAB0004AE981 /* Building.swift in Sources */,
 				8839DFEC207D1E1300317381 /* TeslaMagicTower.swift in Sources */,
+				882AF2A2208E205C00716F33 /* Monster.swift in Sources */,
 				88E60FFD2076373200118B84 /* Map2D.swift in Sources */,
+				882AF2A0208E201B00716F33 /* Hero.swift in Sources */,
 				8839DFFD207E8A8700317381 /* Spirit.swift in Sources */,
 				88E60FF720762AD000118B84 /* Cycle.swift in Sources */,
 			);
@@ -258,49 +223,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		887DB479207CC28E004DF043 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 76BYA9T7S3;
-				INFOPLIST_FILE = GreenSpriteBookResources/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.z-zero.GreenSpriteBookResources";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "GreenSpriteBookResources/GreenSpriteBookResources-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		887DB47A207CC28E004DF043 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 76BYA9T7S3;
-				INFOPLIST_FILE = GreenSpriteBookResources/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.z-zero.GreenSpriteBookResources";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "GreenSpriteBookResources/GreenSpriteBookResources-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		88E60FEE20762AA900118B84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -310,7 +232,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -318,7 +242,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -363,7 +291,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -371,7 +301,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -418,7 +352,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -439,22 +374,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.z-zero.GreenSpriteBook";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		887DB478207CC28E004DF043 /* Build configuration list for PBXNativeTarget "GreenSpriteBookResources" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				887DB479207CC28E004DF043 /* Debug */,
-				887DB47A207CC28E004DF043 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		88E60FE220762AA900118B84 /* Build configuration list for PBXProject "GreenSpriteBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

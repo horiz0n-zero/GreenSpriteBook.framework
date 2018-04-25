@@ -47,12 +47,6 @@ public class TeslaMagicTower: Building {
                    life: TeslaMagicTower.lifeAttack[level].0,
                    attack: TeslaMagicTower.lifeAttack[level].1, scale: scale)
         self.cycleInterval = 2.0
-        /*self.shader = SKShader(source: "void    main() {" +
-                                        "vec4 texture = texture2D(u_texture, v_tex_coord);" +
-                                        "if (texture.b > 0.50 && texture.r < 0.4) {" +
-                                        "texture.rgb *= (sin(u_time) * 1.3);}" +
-                                        "gl_FragColor = texture;" +
-                                        "}")*/
     }
     
     required public init?(coder aDecoder: NSCoder) {

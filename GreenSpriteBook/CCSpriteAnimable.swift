@@ -9,6 +9,9 @@
 import Foundation
 import SpriteKit
 
+public typealias CCSpriteAnimableTexture = [[[SKTexture]]]
+public typealias CCSpriteAnimableTextureArray = [CCSpriteAnimableTexture]
+
 /// a castle clash sprite action : stay, move or attack
 public enum     CCSpriteAction: Int {
     case stay = 0
@@ -37,39 +40,8 @@ public enum     CCSpriteDirection: Int {
 public protocol CCSpriteAnimable {
     var spriteAction: CCSpriteAction { get set }
     var spriteDirection: CCSpriteDirection { get set }
+    var spriteTextures: CCSpriteAnimableTexture { get set }
     var spriteIsLeft: Bool { get set }
-    var spriteTextures: [[[SKTexture]]] { get }
-}
-
-/** load texture from a directory
- */
-/// - parameter path: the full path of a directory with a `/`
-/// - parameter dico: an array of 3 Int [StayCount, MoveCount, AttackCount]
-public func CCSpriteAnimableLoadTexture(from path: String, dico: [Int]) -> [[[SKTexture]]] {
-    var textures = [[[SKTexture]]]()
-    
-    for i in 0...2 {
-        let stage = (i + 1) * 100
-        var direction = [[SKTexture]]()
-        for d in 0...4 {
-            var array = [SKTexture]()
-            for r in 0...dico[i] {
-                let n = stage + (d * 10) + r
-                
-                array.append(SKTexture.init(imageNamed: path + "/\(n).png"))
-            }
-            direction.append(array)
-        }
-        textures.append(direction)
-    }
-    return textures
-}
-
-public extension    CCSpriteAnimable {
-    
-    public subscript() -> [SKTexture] {
-        return self.spriteTextures[self.spriteAction.rawValue][self.spriteDirection.rawValue]
-    }
 }
 
 public extension    CCSpriteAnimable where Self: SKNode {
@@ -161,20 +133,24 @@ public extension    CCSpriteAnimable where Self: SKNode {
         }
     }
 
+    
 }
 
 public extension    CCSpriteAnimable where Self: SKSpriteNode, Self: SpriteCycle {
     
     public func animate() {
-        let frame = self.cycleInterval / TimeInterval(self[].count)
+        let tex = self.spriteTextures[self.spriteAction.rawValue][self.spriteDirection.rawValue]
+        let frame = self.cycleInterval / TimeInterval(tex.count)
         
-        self.run(SKAction.animate(with: self[], timePerFrame: frame, resize: true, restore: false))
+        self.run(SKAction.animate(with: tex,
+                                  timePerFrame: frame, resize: true, restore: false))
     }
     
     public func animateWithCompletion(_ block: @escaping () -> ()) {
-        let frame = self.cycleInterval / TimeInterval(self[].count)
+        let tex = self.spriteTextures[self.spriteAction.rawValue][self.spriteDirection.rawValue]
+        let frame = self.cycleInterval / TimeInterval(tex.count)
         
-        self.run(SKAction.animate(with: self[], timePerFrame: frame, resize: true, restore: false), completion: block)
+        self.run(SKAction.animate(with: tex, timePerFrame: frame, resize: true, restore: false), completion: block)
     }
 }
 

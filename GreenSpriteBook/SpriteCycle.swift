@@ -24,13 +24,13 @@ public extension SpriteCycle where Self: SKNode {
         }
         self.run(SKAction.wait(forDuration: self.cycleInterval), completion: {
             if self.cycleDie == false {
-                
                 return self.startCycle()
             }
             if let dieWork = self.cycleWorkDie {
                 dieWork()
             }
         })
+        
     }
     
 }

@@ -11,10 +11,8 @@ import SpriteKit
 
 public class Spirit: Creature {
     
-    
-    
-    override init(data: CreatureData, textures: [[[SKTexture]]], scale: CGFloat) {
-        super.init(data: data, textures: textures, scale: scale)
+    override init(data: CreatureData, scale: CGFloat = 1.0) {
+        super.init(data: data, scale: scale)
         
     }
     
